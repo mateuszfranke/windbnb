@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { CommonModule } from '@angular/common';
 // @ts-ignore
 import stays from '../../../assets/stays.json';
 

@@ -1,6 +1,18 @@
-.wrapper {
+
+
+.wrapper-super-host {
   display: grid;
   grid-template-columns: 100px 220px 48px;
+  grid-column-gap: 11px;
+  justify-self: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.wrapper-none-super-host
+{
+  display: grid;
+  grid-template-columns: 331px 48px;
   grid-column-gap: 11px;
 }
 .wrapper-mini {
@@ -48,8 +60,13 @@
   border-radius: 12px;
   width: 100px;
   height: 28px;
+
+}
+
+.super-host-center{
+  display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 .star{

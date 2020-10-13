@@ -11,33 +11,37 @@
   grid-template-columns: 120px 100px 50px;
   grid-gap: 0px;
   background-color: white;
-  justify-self: center;
-  align-self: center;
+
 }
 
 .location{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
+  font-family: 'Mulish', sans-serif;
+  color: #000000;
 }
 
 .add {
-  font-size: 14px;
   color: #BDBDBD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: 'Mulish', sans-serif;
 }
-
 .loupe{
   width: 17px;
   height: 17px;
 }
 
-.wrapper-item{
-  font-family: 'Mulish', sans-serif;
-  background-color: white;
-  text-align: center;
 
-}
+.loupe-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.item {
-  /*text-align: center;*/
 }
 
 .border{

@@ -4,11 +4,11 @@
   <div id="image">
     <img [src]="img" class="image">
   </div>
-  <div id="information" class="wrapper">
-    <div class="super-host" [hidden]="!superHost">SUPER HOST</div>
+  <div id="information" [ngClass]="superHost?'wrapper-super-host':'wrapper-none-super-host'">
+    <div class="super-host " [hidden]="!superHost">SUPER HOST</div>
     <div id="title" class="title">
       <span>{{type}}</span>
-      <span *ngIf="beds>0">, {{beds}} beds</span>
+      <span *ngIf="beds != null">,&nbsp;{{beds}} beds</span>
     </div>
     <div id="rating" class="wrapper-mini">
       <img src="assets/baseline_star_black_18pt_1x.png" class="star"/>
