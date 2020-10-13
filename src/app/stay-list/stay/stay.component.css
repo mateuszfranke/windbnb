@@ -1,12 +1,9 @@
-
-
 .wrapper-super-host {
   display: grid;
   grid-template-columns: 100px 220px 48px;
   grid-column-gap: 11px;
-  justify-self: center;
-  justify-items: center;
-  justify-content: center;
+
+
 }
 
 .wrapper-none-super-host
@@ -60,17 +57,19 @@
   border-radius: 12px;
   width: 100px;
   height: 28px;
-
-}
-
-.super-host-center{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.super-host-center{
+  justify-content: center;
+  align-items: center;
+}
+.none{
+
+}
 .star{
   color: #EB5757;
   overflow: hidden;
 }
-

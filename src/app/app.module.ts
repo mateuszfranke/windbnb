@@ -7,7 +7,7 @@ import { StayComponent } from './stay-list/stay/stay.component';
 import { StayListComponent } from './stay-list/stay-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ToolbarComponent } from './header/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
