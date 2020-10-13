@@ -5,9 +5,12 @@
 
 .toolbar{
   justify-self: end;
+  margin-right: 96px;
+  margin-top: 32px;
 }
 
 .banner{
   justify-self: start;
-  margin-left: 30px;
+  margin-left: 121px;
+  margin-top: 49px;
 }

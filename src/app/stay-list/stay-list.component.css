@@ -1,0 +1,23 @@
+.wrapper-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 67px;
+  margin-bottom: 32px;
+}
+
+h4{
+  justify-self: start;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 91px;
+}
+
+.stays-count{
+  justify-self: end;
+  margin-right: 99px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color:#4F4F4F;
+}
