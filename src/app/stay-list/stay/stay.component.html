@@ -1,1 +1,16 @@
-<p>stay works!</p>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+<div class="component">
+  <div id="image">
+    <img [src]="img" class="image">
+  </div>
+  <div id="information" class="wrapper">
+    <div class="super-host" [hidden]="!superHost">SUPER HOST</div>
+    <div id="title" class="title">{{title}}</div>
+    <div id="rating" class="wrapper-mini">
+      <img src="assets/baseline_star_black_18pt_1x.png" class="star"/>
+      <div class="rating">{{rating}}</div>
+    </div>
+  </div>
+  <div id="description" class="description">{{description}}</div>
+</div>

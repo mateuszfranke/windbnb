@@ -7,6 +7,7 @@ import { StayComponent } from './stay-list/stay/stay.component';
 import { StayListComponent } from './stay-list/stay-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HeaderComponent } from './header/header.component';
     StayComponent,
     StayListComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
