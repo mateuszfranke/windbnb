@@ -3,8 +3,8 @@
     <h4>Stays in Finland</h4>
     <div class="stays-count">{{stays}} + stays</div>
   </div>
-  <div id="stays" >
-    <app-stay></app-stay>
+  <div id="stays" class="wrapper-mid">
+    <app-stay *ngFor="let ss of staysArr;let i=index" [index]="i" ></app-stay>
   </div>
 </div>
 

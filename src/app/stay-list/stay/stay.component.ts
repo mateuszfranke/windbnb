@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 // @ts-ignore
 import stays from '../../../assets/stays.json';
 
@@ -9,21 +9,28 @@ import stays from '../../../assets/stays.json';
 })
 export class StayComponent implements OnInit {
 
+  @Input()
+  index:number;
+
   description: string;
   rating: number;
   title: string;
   img: string;
   superHost: boolean;
+  beds:number;
+  type:string;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-    this.rating = 4.40;
-    this.title = 'Lorem ipsum dolor';
-    this.img = stays[0].photo;
-    this.superHost = true;
-    console.log();
+
+    this.description = stays[this.index].title;
+    this.rating = stays[this.index].rating;
+    this.title = stays[this.index].title;
+    this.img = stays[this.index].photo;
+    this.superHost = stays[this.index].superHost;
+    this.beds = stays[this.index].beds;
+    this.type = stays[this.index].type;
   }
 
 }
