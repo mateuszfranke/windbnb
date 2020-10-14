@@ -18,7 +18,6 @@ export class StayListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.staysArr=stays;
   }
 
   ngOnChanges(changes: SimpleChanges) {

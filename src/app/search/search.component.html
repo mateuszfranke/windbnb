@@ -1,15 +1,19 @@
 <div class="search-bar">
-  <div style="margin-left: 100px;" class="input-wrapper">
+  <div id="location" class="input-wrapper">
     <div class="input-wrapper-inside">
       <label>Location</label>
-      <input [(ngModel)]="serchValue"  type="text" name="Add location" class="no-outline" style="margin-bottom: 10px;" >
+      <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline" style="margin-bottom: 10px;" >
     </div>
   </div>
   <div id="add-guest" class="input-wrapper">
-    <label>Guests</label>
-    <input type="text"  name="Add guest" class="no-outline">
+    <div class="input-wrapper-inside">
+      <label>Guests</label>
+      <input type="text" placeholder="Add guest" name="Add guest" class="no-outline" style="margin-bottom: 10px;">
+    </div>
   </div>
-  <div id="btn-search" class="input-wrapper center">
-    <button class="btn" (click)="Search()">Serach</button>
+  <div id="btn-search" class="input-wrapper-no-hover center">
+    <button class="btn" (click)="Search()">
+      <img src="assets/loupe.png" class="loupe">
+      Serach</button>
   </div>
 </div>
