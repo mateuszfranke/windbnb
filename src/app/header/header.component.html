@@ -3,6 +3,9 @@
     <img src="assets/logo.png">
   </div>
   <div class="toolbar">
-    <app-toolbar></app-toolbar>
+    <app-toolbar (onSearch)="Loger($event)"></app-toolbar>
   </div>
+</div>
+<div *ngIf="searchActive" >
+  <app-search></app-search>
 </div>

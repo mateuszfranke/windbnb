@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  searchActive:boolean;
   constructor() { }
 
   ngOnInit(): void {
+    this.searchActive = false;
+  }
+
+  Loger(val){
+    console.log(val);
   }
 
 }
