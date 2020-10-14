@@ -18,6 +18,7 @@ export class StayListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.staysArr=stays;
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -27,7 +28,7 @@ export class StayListComponent implements OnInit {
     console.log("stay-list: "+ this.searchedValue)
     for (let i=0; i<stays.length;i++)
     {
-      if(stays[i].country==this.searchedValue)
+      if(stays[i].country.toUpperCase()==this.searchedValue.toUpperCase())
       {
        this.staysArr.push(stays[i]);
       }

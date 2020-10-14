@@ -19,11 +19,18 @@ body{
 }
 
 .grey{
-  opacity: 20%;
 
 }
 
 .none{}
+
+.BBC{
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 50%;
+}
 
 .stack-top{
   z-index: 9;
