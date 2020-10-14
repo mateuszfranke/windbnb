@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() search:EventEmitter<any> = new EventEmitter<any>();
   searchActive:boolean;
   constructor() { }
+
 
   ngOnInit(): void {
     this.searchActive = false;
   }
 
   Loger(val){
-    console.log(val);
+    console.log("In header component:"+val);
+    this.searchActive = val;
+    this.search.emit(val);
   }
 
 }

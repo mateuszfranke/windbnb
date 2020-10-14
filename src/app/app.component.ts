@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'windbnb';
+
+  serching:boolean;
+
+  logIt(val){
+    this.serching=val;
+    console.log("Information from app component, search is "+this.serching) ;
+  }
 }

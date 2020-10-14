@@ -1,0 +1,21 @@
+.search-bar{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #A9A9A9;
+  height: 500px;
+}
+.input-search{
+  width: 426px;
+  height: 55px;
+}
+.input-add-gruest{
+  width: 426px;
+  height: 55px;
+}
+
+.btn{
+  height: 48px;
+  width: 127px;
+  background-color: #EB5757;
+}

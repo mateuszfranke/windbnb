@@ -1,3 +1,19 @@
 body{
   margin: 0px;
 }
+
+.white{
+  background-color:greenyellow;
+}
+
+.grey{
+  opacity: 20%;
+
+}
+
+.none{}
+
+.stack-top{
+  z-index: 9;
+  margin: 20px; /* for demo purpose  */
+}
