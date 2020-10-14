@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   }
 
   Loger(val){
-    console.log("In header component:"+val);
     this.searchActive = val;
     this.search.emit(val);
   }

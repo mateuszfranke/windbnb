@@ -1,9 +1,15 @@
 <div class="search-bar">
-  <div id="add-location" class="input-search">
-    <input type="text">
+  <div style="margin-left: 100px;" class="input-wrapper">
+    <div class="input-wrapper-inside">
+      <label>Location</label>
+      <input [(ngModel)]="serchValue"  type="text" name="Add location" class="no-outline" style="margin-bottom: 10px;" >
+    </div>
   </div>
-  <div id="add-guest" class="input-add-gruest">
-    <input type="text">
+  <div id="add-guest" class="input-wrapper">
+    <label>Guests</label>
+    <input type="text"  name="Add guest" class="no-outline">
   </div>
-  <button class="btn" (click)="Search()">Serach</button>
+  <div id="btn-search" class="input-wrapper center">
+    <button class="btn" (click)="Search()">Serach</button>
+  </div>
 </div>

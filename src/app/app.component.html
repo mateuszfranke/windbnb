@@ -1,11 +1,11 @@
-<div>
+<div class="container">
 
-  <div *ngIf="serching" id="white-space">
-    <app-search (search)="serching=$event"></app-search>
+  <div *ngIf="serching" id="white-space" class="stack-top box">
+    <app-search (search)="SetSearching($event)"></app-search>
   </div>
-  <app-header (search)="logIt($event)" *ngIf="!serching"></app-header>
+  <app-header (search)="Switch($event)" *ngIf="!serching"></app-header>
   <div id="grey-space" [ngClass]="serching?'grey':'none'">
-    <app-stay-list></app-stay-list>
+    <app-stay-list [searchedValue]="searchedValue"></app-stay-list>
     <app-footer></app-footer>
   </div>
 

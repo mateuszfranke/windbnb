@@ -1,6 +1,18 @@
 body{
   margin: 0px;
 }
+.container{
+  position: relative;
+}
+
+.box{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /*top: 0;*/
+  /*left: 0;*/
+  opacity: 100%;
+}
 
 .white{
   background-color:greenyellow;
@@ -15,5 +27,5 @@ body{
 
 .stack-top{
   z-index: 9;
-  margin: 20px; /* for demo purpose  */
+  /*margin: 20px; !* for demo purpose  *!*/
 }

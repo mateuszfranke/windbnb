@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ISearch} from './ISearch';
 
 @Component({
   selector: 'app-search',
@@ -7,8 +8,10 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  @Output() search:EventEmitter<any> = new EventEmitter<any>();
+  @Output() search:EventEmitter<ISearch> = new EventEmitter<ISearch>();
   searching:boolean = true;
+  serchValue:string;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -22,7 +25,12 @@ export class SearchComponent implements OnInit {
   Search(){
     this.searching = !this.searching;
     console.log("emmited "+this.searching);
-    this.search.emit(this.searching)
+
+    this.search.emit(
+      {
+        searchValue:this.serchValue,
+        searchFlag:this.searching
+            });
   }
 
 }
