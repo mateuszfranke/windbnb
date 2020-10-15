@@ -2,7 +2,12 @@
   <div id="location" class="input-wrapper">
     <div class="input-wrapper-inside">
       <label>Location</label>
-      <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline" style="margin-bottom: 10px;" >
+      <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline" style="margin-top: 5px" >
+    </div>
+    <div id="results" class="location-results">
+      <ul>
+        <li *ngFor="">test1</li>
+      </ul>
     </div>
   </div>
   <div id="add-guest" class="input-wrapper">

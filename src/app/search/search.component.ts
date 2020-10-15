@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ISearch} from './ISearch';
 
 @Component({
@@ -8,7 +8,8 @@ import {ISearch} from './ISearch';
 })
 export class SearchComponent implements OnInit {
 
-  @Output() search:EventEmitter<ISearch> = new EventEmitter<ISearch>();
+  @Output() searchValuesOut:EventEmitter<ISearch> = new EventEmitter<ISearch>();
+  @Input() localizations:string[];
   searching:boolean = true;
   serchValue:string;
 
@@ -26,7 +27,7 @@ export class SearchComponent implements OnInit {
     this.searching = !this.searching;
     console.log("emmited "+this.searching);
 
-    this.search.emit(
+    this.searchValuesOut.emit(
       {
         searchValue:this.serchValue,
         searchFlag:this.searching
