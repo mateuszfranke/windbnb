@@ -34,13 +34,26 @@
 }
 
 .input-wrapper:hover{
-  border: #A9A9A9 solid 2px;
+  /*border: #A9A9A9 solid 2px;*/
 }
 
-label{
-  font-size: 13px;
+.label{
+  font-size: 14px;
   font-family: 'Mulish', sans-serif;
   font-weight: 800;
+  margin-top: 7px;
+}
+.label-grey-mulish-400{
+  font-size: 14px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  color: #BDBDBD;
+}
+
+.label-mulish-700{
+  font-size: 14px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
   margin-top: 7px;
 }
 
@@ -93,4 +106,20 @@ ul>li{
   font-family: 'Mulish', sans-serif;
   font-weight: 400;
   margin-bottom: 32px;
+}
+
+.result-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap:3px;
+}
+
+.adder{
+  display: grid;
+  grid-template-columns: 24px 30px 24px;
+}
+.label-count{
+  justify-self: center;
+  margin-top: 0px;
+  align-self: center;
 }

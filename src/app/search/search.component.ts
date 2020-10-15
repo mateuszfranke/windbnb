@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ISearch} from './ISearch';
+import {Guests} from './Guests';
 
 @Component({
   selector: 'app-search',
@@ -12,6 +13,8 @@ export class SearchComponent implements OnInit {
   @Input() localizations:string[];
   searching:boolean = true;
   serchValue:string;
+  guestCount:number=0;
+  Guest:Guests = new Guests();
 
   constructor() { }
 
@@ -33,5 +36,15 @@ export class SearchComponent implements OnInit {
         searchFlag:this.searching
             });
   }
+
+  AddAdult(){
+    // this.guestCount+=1;
+    this.Guest.AddAdult();
+  }
+  RemoveAdult(){
+    this.Guest.RemoveAdult();
+
+  }
+
 
 }

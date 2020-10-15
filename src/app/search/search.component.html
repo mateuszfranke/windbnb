@@ -1,6 +1,6 @@
 <div class="search-bar">
   <div id="location" class="input-wrapper">
-    <div class="input-wrapper-inside">
+    <div class="input-wrapper-inside label">
       <label>Location</label>
       <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline" style="margin-top: 5px" >
     </div>
@@ -11,9 +11,31 @@
     </div>
   </div>
   <div id="add-guest" class="input-wrapper">
-    <div class="input-wrapper-inside">
+    <div class="input-wrapper-inside label">
       <label>Guests</label>
-      <input type="text" placeholder="Add guest" name="Add guest" class="no-outline" style="margin-bottom: 10px;">
+      <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()<=0">Add guest</label>
+      <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()>=1">{{Guest.ShowTotal()}}</label>
+    </div>
+    <div id="add-guest-toolbox" style="margin-left: 20px;" class="location-results">
+      <div id="adults" class="result-wrapper">
+          <label class="label">Adults</label>
+          <label class="label-grey-mulish-400">Ages 13 or above</label>
+          <div id="add-adults" class="adder">
+            <div style="margin-top: 3px" (click)="Guest.AddAdult()"><img src="assets/plus-box-outline.png"></div>
+            <label class="label-mulish-700 label-count">{{Guest.adults}}</label>
+            <div style="margin-top: 3px" (click)="Guest.RemoveAdult()"><img src="assets/minus-box-outline.png"></div>
+        </div>
+      </div>
+      <div id="children" class="result-wrapper">
+          <label class="label">Children</label>
+          <label class="label-grey-mulish-400">Ages 2-12</label>
+          <div id="add-kid" class="adder">
+            <div style="margin-top: 3px" (click)="Guest.AddKid()"><img src="assets/plus-box-outline.png"></div>
+            <label class="label-mulish-700 label-count">{{Guest.kids}}</label>
+            <div style="margin-top: 3px" (click)="Guest.RemoveKid()"><img src="assets/minus-box-outline.png"></div>
+          </div>
+      </div>
+
     </div>
   </div>
   <div id="btn-search" class="input-wrapper-no-hover center">
