@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {IStays} from './stay-list/stay/IStays';
 import {ISearch} from './search/ISearch';
+import {ISearchCriteria} from './stay-list/ISearchCriteria';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,16 @@ import {ISearch} from './search/ISearch';
 })
 export class AppComponent {
   title = 'windbnb';
-  searchedValue:string;
+  searchCriteria:ISearchCriteria;
   serching:boolean;
 
   SetSearching(val:ISearch){
     this.serching=val.searchFlag
-    console.log("searching for: "+val.searchValue)
-    this.searchedValue=val.searchValue;
-    console.log("Information from app component, search is "+this.serching) ;
+    this.searchCriteria = {searchedValue:"",adultCount:0,childrenCount:0};
+    this.searchCriteria.searchedValue=val.searchValue;
+    this.searchCriteria.adultCount = val.adultsCount;
+    this.searchCriteria.childrenCount = val.childrenCount;
+
 
   }
 

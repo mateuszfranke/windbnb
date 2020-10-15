@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output, SimpleChanges} from '@an
 // @ts-ignore
 import stays from "../../assets/stays.json";
 import {IStays} from './stay/IStays';
+import {ISearchCriteria} from './ISearchCriteria';
 
 @Component({
   selector: 'app-stay-list',
@@ -14,12 +15,13 @@ export class StayListComponent implements OnInit {
   staysArr:IStays[] =[];
   location:string[];
   single:boolean;
-  @Input() searchedValue:string;
+  @Input() searchCriteria:ISearchCriteria;
   localizations:string[];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.searchCriteria = {searchedValue:"",childrenCount:0,adultCount:0}
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -28,50 +30,48 @@ export class StayListComponent implements OnInit {
     this.staysArr=[];
     this.location=[];
 
-    console.log("stay-list: "+ this.searchedValue)
-
-    if(this.searchedValue.includes(","))
+    if(this.searchCriteria !== undefined)
     {
-      // console.log("we need to split into city/country: "+this.searchedValue)
-      this.location = this.searchedValue.split(",");
-    }else{
-      this.single = true;
-    }
-
-    for (let i=0;i<stays.length;i++)
-    {
-      if(this.single)
+      if(this.searchCriteria.searchedValue.includes(","))
       {
-        if(stays[i].country.toUpperCase()==this.searchedValue.toUpperCase())
+        this.location = this.searchCriteria.searchedValue.split(",");
+      }else{
+        this.single = true;
+      }
+
+      for (let i=0;i<stays.length;i++)
+      {
+
+        if(this.single)
         {
-          this.staysArr.push(stays[i]);
+          if(stays[i].country.toUpperCase()==this.searchCriteria.searchedValue.toUpperCase())
+          {
+            if((this.searchCriteria.childrenCount + this.searchCriteria.adultCount) < stays[i].maxGuests)
+            {
+              this.staysArr.push(stays[i]);
+            }
 
-        }
+          }
 
-      }else
+        }else
         {
           if(
             stays[i].country.toUpperCase()==this.location[0].toUpperCase() &&
             stays[i].city.toUpperCase()==this.location[1].toUpperCase()
           )
           {
-            this.staysArr.push(stays[i]);
+            if((this.searchCriteria.childrenCount + this.searchCriteria.adultCount) < stays[i].maxGuests)
+            {
+              this.staysArr.push(stays[i]);
+            }
           }
         }
 
+      }
+      this.stays=this.staysArr.length;
     }
 
-    // for (let i=0; i<stays.length;i++)
-    // {
-    //   if(stays[i].city.toUpperCase()==this.searchedValue.toUpperCase())
-    //   {
-    //    this.staysArr.push(stays[i]);
-    //   }
-    // }
 
-    this.stays=this.staysArr.length;
-    // You can also use categoryId.previousValue and
-    // categoryId.firstChange for comparing old and new values
 
   }
 

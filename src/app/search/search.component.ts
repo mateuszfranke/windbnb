@@ -9,11 +9,10 @@ import {Guests} from './Guests';
 })
 export class SearchComponent implements OnInit {
 
-  @Output() searchValuesOut:EventEmitter<ISearch> = new EventEmitter<ISearch>();
+  @Output() searchCriteriaOut:EventEmitter<ISearch> = new EventEmitter<ISearch>();
   @Input() localizations:string[];
   searching:boolean = true;
   serchValue:string;
-  guestCount:number=0;
   Guest:Guests = new Guests();
 
   constructor() { }
@@ -21,29 +20,23 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  LogIt(val){
-
-    console.log("Search Component:"+ val);
-  }
-
   Search(){
     this.searching = !this.searching;
-    console.log("emmited "+this.searching);
 
-    this.searchValuesOut.emit(
+    this.searchCriteriaOut.emit(
       {
         searchValue:this.serchValue,
-        searchFlag:this.searching
+        searchFlag:this.searching,
+        adultsCount:this.Guest.adults,
+        childrenCount:this.Guest.kids
             });
   }
 
   AddAdult(){
-    // this.guestCount+=1;
     this.Guest.AddAdult();
   }
   RemoveAdult(){
     this.Guest.RemoveAdult();
-
   }
 
 

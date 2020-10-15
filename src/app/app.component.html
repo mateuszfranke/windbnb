@@ -2,15 +2,15 @@
 
 <div class="container">
   <div *ngIf="serching" id="white-space" class="stack-top box">
-    <app-search (searchValuesOut)="SetSearching($event)" ></app-search>
+    <app-search (searchCriteriaOut)="SetSearching($event)" ></app-search>
   </div>
   <app-header (search)="Switch($event)" *ngIf="!serching"></app-header>
   <div id="grey-space">
     <div class="BBC" *ngIf="serching"></div>
-    <app-stay-list [searchedValue]="searchedValue"></app-stay-list>
+    <app-stay-list [searchCriteria]="searchCriteria"></app-stay-list>
     <app-footer></app-footer>
   </div>
-
+s
 
 </div>
 
