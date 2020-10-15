@@ -72,16 +72,20 @@ input{
 .btn{
   height: 48px;
   width: 127px;
-  background: rgba(235, 87, 87, 0.9);
+  background-color: #EB5757;
   border-radius: 16px;
-  color: #F2F2F2;
-  font-size: 13px;
+  color: white;
+  font-size: 17px;
   font-family: 'Mulish', sans-serif;
   font-weight: 500;
+  border: none;
 }
 
 .center{
   justify-content: center;
+  justify-self: center;
+  text-align: center;
+  justify-items: center;
 }
 
 .stack-top{
@@ -90,9 +94,8 @@ input{
 }
 
 .loupe{
-  width: 17px;
-  height: 17px;
-  margin-right: 10px;
+  width: 24px;
+  height: 24px;
 }
 
 .location-results{
