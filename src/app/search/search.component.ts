@@ -13,6 +13,7 @@ export class SearchComponent implements OnInit {
   @Input() localizations:string[];
   searching:boolean = true;
   serchValue:string;
+  guestCalc:boolean=true;
   Guest:Guests = new Guests();
 
   constructor() { }

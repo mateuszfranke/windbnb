@@ -1,8 +1,8 @@
 <div class="search-bar">
-  <div id="location" class="input-wrapper">
-    <div class="input-wrapper-inside label">
-      <label>Location</label>
-      <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline" style="margin-top: 5px" >
+  <div id="location" class="">
+    <div class="input-wrapper-inside label input-wrapper hover-hock">
+      <label  style="margin-top: 7px;">Location</label>
+      <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline"  >
     </div>
     <div id="results" class="location-results">
       <ul>
@@ -10,13 +10,13 @@
       </ul>
     </div>
   </div>
-  <div id="add-guest" class="input-wrapper">
-    <div class="input-wrapper-inside label">
-      <label>Guests</label>
+  <div id="add-guest" (mouseleave)="guestCalc=false" (mouseover)="guestCalc=true">
+    <div class="input-wrapper-inside label hover-hock input-wrapper" >
+      <label style="margin-top: 7px;">Guests</label>
       <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()<=0">Add guest</label>
       <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()>=1">{{Guest.ShowTotal()}}</label>
     </div>
-    <div id="add-guest-toolbox" style="margin-left: 20px;" class="location-results">
+    <div *ngIf="guestCalc" id="add-guest-toolbox" style="margin-left: 20px;" class="location-results">
       <div id="adults" class="result-wrapper">
           <label class="label">Adults</label>
           <label class="label-grey-mulish-400">Ages 13 or above</label>
@@ -38,7 +38,7 @@
 
     </div>
   </div>
-  <div id="btn-search" class="input-wrapper-no-hover center">
+  <div id="btn-search" class="input-wrapper center" style="margin-top: 7px;">
     <button class="btn" (click)="Search()">
       <img src="assets/loupe.png" class="loupe">
       Serach</button>

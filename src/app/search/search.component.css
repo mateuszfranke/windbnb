@@ -17,24 +17,22 @@
   height: 55px;
   border-radius: 16px;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  padding-left: 30px;
 }
-.input-wrapper-no-hover {
-  display: grid;
-  background-color: white;
-  width: 426px;
-  height: 55px;
-  border-radius: 16px;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-}
+
 .input-wrapper-inside{
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 0px ;
-  margin-left: 18px;
+  margin-left: 22px;
 }
 
-.input-wrapper:hover{
-  /*border: #A9A9A9 solid 2px;*/
+.hover-hock{
+
+}
+
+.hover-hock:hover{
+  border: #A9A9A9 solid 1px ;
 }
 
 .label{
