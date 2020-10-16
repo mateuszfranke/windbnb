@@ -52,7 +52,8 @@
 
 }
 .hover-hock:hover{
-  border: #A9A9A9 solid 1px ;
+  border: #A9A9A9 solid 3px ;
+  border-radius: 16px;
 }
 .label{
   font-size: 14px;
