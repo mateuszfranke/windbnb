@@ -1,4 +1,4 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit, Output, SimpleChanges} from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -8,20 +8,21 @@ import { EventEmitter } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  location: string;
+  @Input() location: string;
   search:boolean;
   @Output() onSearch:EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
-    this.location = 'Helsinki,Finland';
     this.search = false;
   }
 
   deleteComment() {
     this.search=!this.search;
     this.onSearch.emit(this.search);
+  }
+  ngOnChanges(changes: SimpleChanges) {
   }
 
 }

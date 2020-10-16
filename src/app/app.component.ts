@@ -13,9 +13,14 @@ export class AppComponent {
   searchCriteria:ISearchCriteria;
   serching:boolean;
 
+  ngOnInit():void{
+    this.searchCriteria = {searchedValue:" ",adultCount:0,childrenCount:0};
+
+  }
+
   SetSearching(val:ISearch){
     this.serching=val.searchFlag
-    this.searchCriteria = {searchedValue:"",adultCount:0,childrenCount:0};
+    this.searchCriteria = {searchedValue:" ",adultCount:0,childrenCount:0};
     this.searchCriteria.searchedValue=val.searchValue;
     this.searchCriteria.adultCount = val.adultsCount;
     this.searchCriteria.childrenCount = val.childrenCount;
