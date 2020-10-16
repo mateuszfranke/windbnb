@@ -1,51 +1,116 @@
 <div class="search-bar">
-  <div id="location" class="">
-    <div class="input-wrapper-inside label input-wrapper hover-hock">
-      <label  style="margin-top: 7px;">Location</label>
-      <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline"  >
-    </div>
-    <div id="results" class="location-results">
-      <ul>
-        <li *ngFor="">test1</li>
-      </ul>
-    </div>
-  </div>
-  <div id="add-guest" (mouseleave)="guestCalc=false" (mouseover)="guestCalc=true">
-    <div class="input-wrapper-inside label hover-hock input-wrapper" >
-      <label style="margin-top: 7px;">Guests</label>
-      <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()<=0">Add guest</label>
-      <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()>=1">{{Guest.ShowTotal()}}</label>
-    </div>
-    <div *ngIf="guestCalc" id="add-guest-toolbox" style="margin-left: 20px;" class="location-results">
-      <div id="adults" class="result-wrapper">
-          <label class="label">Adults</label>
-          <label class="label-grey-mulish-400">Ages 13 or above</label>
-          <div id="add-adults" class="adder">
-            <div style="margin-top: 3px" (click)="Guest.AddAdult()"><img src="assets/plus-box-outline.png"></div>
-            <label class="label-mulish-700 label-count">{{Guest.adults}}</label>
-            <div style="margin-top: 3px" (click)="Guest.RemoveAdult()"><img src="assets/minus-box-outline.png"></div>
-        </div>
-      </div>
-      <div id="children" style="margin-top: 20px;" class="result-wrapper">
-          <label class="label">Children</label>
-          <label class="label-grey-mulish-400">Ages 2-12</label>
-          <div id="add-kid" class="adder">
-            <div style="margin-top: 3px" (click)="Guest.AddKid()"><img src="assets/plus-box-outline.png"></div>
-            <label class="label-mulish-700 label-count">{{Guest.kids}}</label>
-            <div style="margin-top: 3px" (click)="Guest.RemoveKid()"><img src="assets/minus-box-outline.png"></div>
+  <div id="search" class="big-btn-wrapper">
+    <div style="border-right: #F2F2F2 1px solid">
+          <div class="label item-placeholder" style="margin-left: 30px">
+            <label >Location</label>
+            <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline"  >
           </div>
-      </div>
+    </div>
+    <div style="border-right: #F2F2F2 1px solid">
+          <div class="label item-placeholder" style="margin-left: 30px">
+            <label>Guests</label>
+            <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()<=0">Add guest</label>
+            <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()>=1">{{Guest.ShowTotal()}}</label>
+          </div>
+    </div>
+    <div style="justify-self: center; align-self: center">
+        <div id="btn-search">
+          <div (click)="Search()">
+            <div class="btn-center btn-grid btn btn-items-center" >
+              <img src="assets/magnify.png" >
+              <label><b>Search</b></label>
+            </div>
 
+          </div>
+
+        </div>
     </div>
   </div>
-  <div id="btn-search" class="input-wrapper center">
-    <div (click)="Search()">
-      <div class="btn-center btn-grid btn btn-items-center" >
-        <img src="assets/magnify.png" >
-        <label><b>Search</b></label>
-      </div>
+
+  <div id="results" class="results-wrapper">
+    <div>
+
+          <div id="" class="location-results">
+            <ul>
+              <li>test1</li>
+              <li>test2</li>
+              <li>test3</li>
+              <li>test4</li>
+            </ul>
+          </div>
 
     </div>
-
+    <div>
+          <div *ngIf="guestCalc" id="add-guest-toolbox" style="margin-left: 30px;" class="location-results">
+            <div id="adults" class="result-wrapper">
+                <label class="label">Adults</label>
+                <label class="label-grey-mulish-400">Ages 13 or above</label>
+                <div id="add-adults" class="adder">
+                  <div style="margin-top: 3px" (click)="Guest.AddAdult()"><img src="assets/plus-box-outline.png"></div>
+                  <label class="label-mulish-700 label-count">{{Guest.adults}}</label>
+                  <div style="margin-top: 3px" (click)="Guest.RemoveAdult()"><img src="assets/minus-box-outline.png"></div>
+              </div>
+            </div>
+                  <div id="children" style="margin-top: 20px;" class="result-wrapper">
+                      <label class="label">Children</label>
+                      <label class="label-grey-mulish-400">Ages 2-12</label>
+                      <div id="add-kid" class="adder">
+                        <div style="margin-top: 3px" (click)="Guest.AddKid()"><img src="assets/plus-box-outline.png"></div>
+                        <label class="label-mulish-700 label-count">{{Guest.kids}}</label>
+                        <div style="margin-top: 3px" (click)="Guest.RemoveKid()"><img src="assets/minus-box-outline.png"></div>
+                      </div>
+                  </div>
+          </div>
+    <div></div>
   </div>
+<!--  <div id="location" class="">-->
+<!--    <div class="input-wrapper-inside label input-wrapper hover-hock">-->
+<!--      <label  style="margin-top: 7px;">Location</label>-->
+<!--      <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline"  >-->
+<!--    </div>-->
+<!--    <div id="results" class="location-results">-->
+<!--      <ul>-->
+<!--        <li *ngFor="">test1</li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div id="add-guest" (mouseleave)="guestCalc=false" (mouseover)="guestCalc=true">-->
+<!--    <div class="input-wrapper-inside label hover-hock input-wrapper" >-->
+<!--      <label style="margin-top: 7px;">Guests</label>-->
+<!--      <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()<=0">Add guest</label>-->
+<!--      <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()>=1">{{Guest.ShowTotal()}}</label>-->
+<!--    </div>-->
+<!--    <div *ngIf="guestCalc" id="add-guest-toolbox" style="margin-left: 20px;" class="location-results">-->
+<!--      <div id="adults" class="result-wrapper">-->
+<!--          <label class="label">Adults</label>-->
+<!--          <label class="label-grey-mulish-400">Ages 13 or above</label>-->
+<!--          <div id="add-adults" class="adder">-->
+<!--            <div style="margin-top: 3px" (click)="Guest.AddAdult()"><img src="assets/plus-box-outline.png"></div>-->
+<!--            <label class="label-mulish-700 label-count">{{Guest.adults}}</label>-->
+<!--            <div style="margin-top: 3px" (click)="Guest.RemoveAdult()"><img src="assets/minus-box-outline.png"></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div id="children" style="margin-top: 20px;" class="result-wrapper">-->
+<!--          <label class="label">Children</label>-->
+<!--          <label class="label-grey-mulish-400">Ages 2-12</label>-->
+<!--          <div id="add-kid" class="adder">-->
+<!--            <div style="margin-top: 3px" (click)="Guest.AddKid()"><img src="assets/plus-box-outline.png"></div>-->
+<!--            <label class="label-mulish-700 label-count">{{Guest.kids}}</label>-->
+<!--            <div style="margin-top: 3px" (click)="Guest.RemoveKid()"><img src="assets/minus-box-outline.png"></div>-->
+<!--          </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div id="btn-search" class="input-wrapper center">-->
+<!--    <div (click)="Search()">-->
+<!--      <div class="btn-center btn-grid btn btn-items-center" >-->
+<!--        <img src="assets/magnify.png" >-->
+<!--        <label><b>Search</b></label>-->
+<!--      </div>-->
+
+<!--    </div>-->
+
+<!--  </div>-->
+</div>
 </div>

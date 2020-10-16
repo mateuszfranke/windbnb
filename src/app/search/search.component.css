@@ -1,14 +1,37 @@
 .search-bar{
   width: 100%;
-  display: grid;
-  grid-template-columns: 426px 426px 426px;
-  grid-column-gap: 0px;
   background-color: white;
   height: 400px;
-  margin-top: 0px;
+  /*margin-top: 0px;*/
   top: 0;
-  justify-content: center ;
 }
+.big-btn-wrapper
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: white;
+  height: 55px;
+  margin-left:100px;
+  margin-right: 100px;
+  border-radius: 16px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results-wrapper
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: white;
+  height: 55px;
+  margin-left:100px;
+  margin-right: 100px;
+}
+
+.item-placeholder{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 
 .input-wrapper {
   display: grid;
@@ -19,22 +42,18 @@
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   padding-left: 30px;
 }
-
 .input-wrapper-inside{
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 0px ;
   margin-left: 22px;
 }
-
 .hover-hock{
 
 }
-
 .hover-hock:hover{
   border: #A9A9A9 solid 1px ;
 }
-
 .label{
   font-size: 14px;
   font-family: 'Mulish', sans-serif;
@@ -47,14 +66,12 @@
   font-weight: 400;
   color: #BDBDBD;
 }
-
 .label-mulish-700{
   font-size: 14px;
   font-family: 'Mulish', sans-serif;
   font-weight: 700;
   margin-top: 7px;
 }
-
 input{
   border: none;
   /*border-top-style: hidden;*/
@@ -80,24 +97,20 @@ input{
   font-weight: 500;
   border: none;
 }
-
 .center{
   justify-content: center;
   justify-self: center;
   text-align: center;
   justify-items: center;
 }
-
 .stack-top{
   z-index: 9;
   /*margin: 20px; !* for demo purpose  *!*/
 }
-
 .loupe{
   width: 24px;
   height: 24px;
 }
-
 .location-results{
   margin-top: 42px;
 
@@ -108,13 +121,11 @@ ul>li{
   font-weight: 400;
   margin-bottom: 32px;
 }
-
 .result-wrapper{
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap:3px;
 }
-
 .adder{
   display: grid;
   grid-template-columns: 24px 30px 24px;
@@ -133,8 +144,8 @@ ul>li{
   align-items: center;
 
 }
-
 .btn-items-center{
   justify-content:center;
-
 }
+
+
