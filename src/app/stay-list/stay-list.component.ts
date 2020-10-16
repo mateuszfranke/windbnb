@@ -14,7 +14,7 @@ export class StayListComponent implements OnInit {
   stays:number;
   staysArr:IStays[] =[];
   location:string[];
-  single:boolean;
+  single:boolean = false;
   @Input() searchCriteria:ISearchCriteria;
   localizations:string[];
 
@@ -35,6 +35,7 @@ export class StayListComponent implements OnInit {
       if(this.searchCriteria.searchedValue.includes(","))
       {
         this.location = this.searchCriteria.searchedValue.split(",");
+        this.single = false;
       }else{
         this.single = true;
       }
