@@ -12,7 +12,6 @@ export class HeaderComponent implements OnInit {
   searchActive:boolean;
   constructor() { }
 
-
   ngOnInit(): void {
     this.searchActive = false;
   }

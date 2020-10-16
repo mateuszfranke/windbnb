@@ -124,3 +124,17 @@ ul>li{
   margin-top: 0px;
   align-self: center;
 }
+.btn-grid{
+  display: grid;
+  grid-template-columns: 24px 60px;
+  grid-column-gap: 5px;
+}
+.btn-center{
+  align-items: center;
+
+}
+
+.btn-items-center{
+  justify-content:center;
+
+}
