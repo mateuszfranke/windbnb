@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: 100px 220px 48px;
   grid-column-gap: 11px;
-
-
 }
 
 .wrapper-none-super-host
@@ -11,11 +9,13 @@
   display: grid;
   grid-template-columns: 331px 48px;
   grid-column-gap: 11px;
+
 }
 .wrapper-mini {
   display: grid;
   grid-template-columns: 16px 32px;
   grid-column-gap: 7px;
+  align-self: end;
 }
 .component{
   width: 395px;
