@@ -75,10 +75,6 @@
 }
 input{
   border: none;
-  /*border-top-style: hidden;*/
-  /*border-right-style: hidden;*/
-  /*border-left-style: hidden;*/
-  /*border-bottom-style: groove;*/
   background-color: white;
   font-size: 14px;
   font-family: 'Mulish', sans-serif;
@@ -121,6 +117,7 @@ ul>li{
   font-family: 'Mulish', sans-serif;
   font-weight: 400;
   margin-bottom: 32px;
+  list-style-type: none;
 }
 .result-wrapper{
   display: grid;
@@ -148,5 +145,16 @@ ul>li{
 .btn-items-center{
   justify-content:center;
 }
+.location-grid{
+  display: grid;
+  grid-template-columns: 15px 1fr;
+}
+.location-name{
+  align-content: center;
+  align-self: center;
+  margin-left: 10px;
+  color: #4F4F4F !important;
 
+
+}
 

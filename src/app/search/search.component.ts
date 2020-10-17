@@ -15,11 +15,20 @@ export class SearchComponent implements OnInit {
   serchValue:string;
   guestCalc:boolean=true;
   Guest:Guests = new Guests();
+  locations:string[] = [];
+
 
   constructor() { }
 
   ngOnInit(): void {
+    this.locations.push("Helsinki,Finland");
+    this.locations.push("Turku,Finland");
+    this.locations.push("Oulu,Finland")
+    this.locations.push("Vassa,Finland")
+
   }
+
+
 
   Search(){
     this.searching = !this.searching;
@@ -32,7 +41,6 @@ export class SearchComponent implements OnInit {
         childrenCount:this.Guest.kids
             });
   }
-
   AddAdult(){
     this.Guest.AddAdult();
   }

@@ -37,7 +37,7 @@
 .rating {
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
-
+  color: #4F4F4F;
 }
 
 .image{
@@ -69,7 +69,4 @@
 .none{
 
 }
-.star{
-  color: #EB5757;
-  overflow: hidden;
-}
+
