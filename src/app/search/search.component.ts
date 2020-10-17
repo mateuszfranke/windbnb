@@ -11,9 +11,10 @@ export class SearchComponent implements OnInit {
 
   @Output() searchCriteriaOut:EventEmitter<ISearch> = new EventEmitter<ISearch>();
   @Input() localizations:string[];
-  searching:boolean = true;
+  searching:boolean = false;
   serchValue:string;
   guestCalc:boolean=true;
+  locationResults:boolean = true;
   Guest:Guests = new Guests();
   locations:string[] = [];
 

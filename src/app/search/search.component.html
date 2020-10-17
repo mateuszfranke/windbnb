@@ -1,12 +1,12 @@
 <div class="search-bar">
   <div id="search" class="big-btn-wrapper">
-    <div style="border-right: #F2F2F2 1px solid" class="hover-hock">
+    <div style="border-right: #F2F2F2 1px solid" class="hover-hock" (click)="locationResults=!locationResults">
           <div class="label item-placeholder" style="margin-left: 30px">
             <label >Location</label>
             <input [(ngModel)]="serchValue"  type="text"  placeholder="Add location" class="no-outline"  >
           </div>
     </div>
-    <div style="border-right: #F2F2F2 1px solid" class="hover-hock">
+    <div style="border-right: #F2F2F2 1px solid" class="hover-hock" (click)="guestCalc=!guestCalc">
           <div class="label item-placeholder" style="margin-left: 30px">
             <label>Guests</label>
             <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()<=0">Add guest</label>
@@ -27,9 +27,9 @@
     </div>
   </div>
 
-  <div id="results" class="results-wrapper">
+  <div  id="results" class="results-wrapper">
     <div>
-          <div id="" class="location-results">
+          <div id="" class="location-results" *ngIf="locationResults">
             <ul>
               <li *ngFor="let xx of locations;index as i" class="location-grid">
                 <img src="assets/map-marker(1).png">
