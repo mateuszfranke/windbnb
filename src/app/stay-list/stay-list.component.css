@@ -1,8 +1,17 @@
+/* If the screen size is 600px or less */
 @media screen and (max-width: 600px) {
   .wrapper-header {
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: end;
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+  .wrapper-mid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 32px;
+    justify-items: center;
   }
 
   .title{
@@ -12,45 +21,53 @@
     font-size: 24px;
   }
 
-}
-  .wrapper-header {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin-top: 67px;
-  margin-bottom: 32px;
-}
+  .stays-count{
+    justify-self: end;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color:#4F4F4F;
+  }
 
-.title{
-  justify-self: start;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-.stays-count{
-  justify-self: end;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color:#4F4F4F;
-}
-
-.wrapper-mid{
-  margin-left: 95px;
-  margin-right: 95px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 42px;
-  grid-column-gap: 32px;
-}
-
-@media screen and (max-width: 600px) {
-  .wrapper-mid{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 32px;
+  .wrapper{
+    margin-bottom: 92px;
   }
 }
-.wrapper{
-  margin-bottom: 92px;
+
+/* If the screen size is 601px or more */
+
+@media screen and (min-width: 601px) {
+  .wrapper-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 67px;
+    margin-bottom: 32px;
+  }
+
+  .title{
+    justify-self: start;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .stays-count{
+    justify-self: end;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color:#4F4F4F;
+  }
+
+  .wrapper-mid{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 42px;
+    grid-column-gap: 32px;
+  }
+
+  .wrapper{
+    margin-bottom: 92px;
+  }
 }

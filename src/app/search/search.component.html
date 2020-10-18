@@ -1,4 +1,8 @@
 <div class="search-bar">
+  <div class="mobile-section">
+    <span style="justify-self: start;">Edit your search</span>
+    <div style="justify-self: end" (click)="Search()">X</div>
+  </div>
   <div id="search" class="big-btn-wrapper">
     <div style="border-right: #F2F2F2 1px solid" class="hover-hock" (click)="ShowLocation()">
           <div class="label item-placeholder" style="margin-left: 30px">
@@ -13,7 +17,7 @@
             <label class="label-grey-mulish-400" *ngIf="Guest.ShowTotal()>=1">{{Guest.ShowTotal()}}</label>
           </div>
     </div>
-    <div style="justify-self: center; align-self: center">
+    <div class="btn-section" >
         <div id="btn-search">
           <div (click)="Search()">
             <div class="btn-center btn-grid btn btn-items-center" >
@@ -24,7 +28,6 @@
         </div>
     </div>
   </div>
-
   <div id="results" class="results-wrapper">
     <div>
           <div id="" class="location-results" *ngIf="locationResults">

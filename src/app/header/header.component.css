@@ -1,19 +1,21 @@
-.wrapper{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+@media screen and (min-width: 601px) {
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .toolbar{
+    justify-self: end;
+    margin-top: 32px;
+  }
+
+  .banner{
+    justify-self: start;
+    margin-top: 49px;
+  }
 }
 
-.toolbar{
-  /*justify-self: end;*/
-  /*margin-right: 96px;*/
-  /*margin-top: 32px;*/
-}
 
-.banner{
-  /*justify-self: start;*/
-  /*margin-left: 121px;*/
-  /*margin-top: 49px;*/
-}
 
 
 @media screen and (max-width: 600px) {
@@ -28,8 +30,6 @@
   .toolbar{
     justify-self: center;
   }
-
-
 }
 
 
