@@ -18,10 +18,13 @@ export class StayListComponent implements OnInit {
   @Input() searchCriteria:ISearchCriteria;
   localizations:string[];
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
     this.searchCriteria = {searchedValue:"",childrenCount:0,adultCount:0}
+    this.staysArr=stays;
   }
 
   ngOnChanges(changes: SimpleChanges) {

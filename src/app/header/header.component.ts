@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchActive = false;
+    this.searchedValue = "Add location";
   }
 
   Loger(val){

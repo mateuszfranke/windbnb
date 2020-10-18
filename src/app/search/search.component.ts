@@ -23,7 +23,6 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.searching=true;
-
     this.locations.push("Finland,Helsinki");
     this.locations.push("Finland,Turku");
     this.locations.push("Finland,Oulu")
