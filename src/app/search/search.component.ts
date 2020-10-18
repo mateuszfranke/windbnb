@@ -24,12 +24,18 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.searching=true;
 
-    this.locations.push("Helsinki,Finland");
-    this.locations.push("Turku,Finland");
-    this.locations.push("Oulu,Finland")
-    this.locations.push("Vassa,Finland")
+    this.locations.push("Finland,Helsinki");
+    this.locations.push("Finland,Turku");
+    this.locations.push("Finland,Oulu")
+    this.locations.push("Finland,Vassa")
 
   }
+
+  PickLocationForSearch(val:number){
+    this.serchValue='';
+    this.serchValue=this.locations[val];
+  }
+
 
   ShowLocation(){
     this.locationResults=true;

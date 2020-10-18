@@ -29,7 +29,7 @@
     <div>
           <div id="" class="location-results" *ngIf="locationResults">
             <ul>
-              <li *ngFor="let xx of locations;index as i" class="location-grid">
+              <li *ngFor="let xx of locations;index as i" class="location-grid" (click)="PickLocationForSearch(i)">
                 <img src="assets/map-marker(1).png">
                 <span class="location-name label-grey-mulish-400">{{xx}}</span>
               </li>

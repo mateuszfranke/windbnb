@@ -4,15 +4,32 @@
 }
 
 .toolbar{
-  justify-self: end;
-  margin-right: 96px;
-  margin-top: 32px;
+  /*justify-self: end;*/
+  /*margin-right: 96px;*/
+  /*margin-top: 32px;*/
 }
 
 .banner{
-  justify-self: start;
-  margin-left: 121px;
-  margin-top: 49px;
+  /*justify-self: start;*/
+  /*margin-left: 121px;*/
+  /*margin-top: 49px;*/
+}
+
+
+@media screen and (max-width: 600px) {
+  .wrapper{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-row-gap: 30px;
+  }
+  .banner{
+      margin-top: 20px;
+  }
+  .toolbar{
+    justify-self: center;
+  }
+
+
 }
 
 
