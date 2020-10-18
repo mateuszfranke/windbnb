@@ -4,12 +4,11 @@
     <app-search (searchCriteriaOut)="SetSearching($event)" ></app-search>
   </div>
   <app-header [searchedValue]="searchCriteria.searchedValue" (search)="Switch($event)" *ngIf="!serching"></app-header>
-  <div id="grey-space">
+  <div id="grey-space ">
     <div class="BBC" *ngIf="serching"></div>
     <app-stay-list [searchCriteria]="searchCriteria"></app-stay-list>
     <app-footer></app-footer>
   </div>
-
 
 </div>
 

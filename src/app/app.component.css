@@ -2,13 +2,18 @@
   .body{
     margin: 13px;
   }
+
+
 }
 @media screen and (min-width: 601px) {
   .body{
     margin: 100px;
+
   }
 }
-
+.body-no-margin{
+  margin: 0px;
+}
 .container{
   position: relative;
 }
@@ -22,14 +27,18 @@
 .none{}
 
 .BBC{
-  background-color: black;
+  background-color: white;
   height: 100% !important;
   width: 100% !important;
   position: absolute;
   opacity: 0.5;
+  margin: 0px !important;
 }
 
 .stack-top{
   z-index: 9;
-  /*margin: 20px; !* for demo purpose  *!*/
+}
+.stack-black{
+  z-index: 11;
+
 }
